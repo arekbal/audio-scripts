@@ -9,7 +9,7 @@ Requires:
 `ffmpeg`, `grep`, `sed`, `cat` available in the `PATH`.
 
 Usage:
-`./normalize_dir.sh "MY_DJ_SETS_DIRECTORY_WITH WAVS" -limiter`
+`./normalize_dir.sh "MY_RECORDINGS_DIRECTORY_WITH WAVS" -limiter`
 
 `-limiter` option is optional
 
