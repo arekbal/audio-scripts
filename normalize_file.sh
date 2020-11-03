@@ -25,7 +25,7 @@ fi
 
 rm "$OUTPUT"
 # -af "alimiter=limit=0.83,silenceremove=0:0:0:-1:5:-92dB"
-ffmpeg -hide_banner -i "$INPUT" -filter_complex "volume=$gain$LIMITER" -metadata comment="" "$INPUT".tmp-limited.wav
+ffmpeg -hide_banner -i "$INPUT" -filter_complex "volume=$gain$LIMITER" -metadata comment="" -acodec pcm_f32le  "$INPUT".tmp-limited.wav
 
 ffmpeg -hide_banner -i "$INPUT".tmp-limited.wav -af volumedetect  -f null -y nul &> limitation_phase.txt 
 
